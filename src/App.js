@@ -27,9 +27,8 @@ const useStyles = makeStyles({
 });
 
 const App = () => {
-  const baseUrl = `https://min-api.cryptocompare.com/data/pricemultifull?asd`;
+  const baseUrl = `https://min-api.cryptocompare.com/data/pricemultifull?`;
   const fsyms = ["BTC,ETH,LTC,XRP,BCH,BNB,DOT,BSV,EOS,DAI,AR"];
-  // const tsyms = ["USD"];
   const classes = useStyles();
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
