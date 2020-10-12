@@ -2,9 +2,9 @@ import { useState } from "react";
 import { sortBy } from "../utils/utils";
 
 export const useSelect = (data, setData) => {
-  const [sortByPrice, setSortByPrice] = useState(false);
-  const [sortByOpenDay, setSortByOpenDay] = useState(false);
-  const [sortByOpenChange, setSortByOpenChange] = useState(false);
+  const [sortByPrice, setSortByPrice] = useState(true);
+  const [sortByOpenDay, setSortByOpenDay] = useState(true);
+  const [sortByOpenChange, setSortByOpenChange] = useState(true);
   const handleSortByPrice = (sortDataBy) => {
     setSortByPrice(!sortByPrice, sortDataBy);
     setData(sortBy(data, sortByPrice, sortDataBy));

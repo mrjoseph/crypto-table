@@ -53,6 +53,10 @@ export const parseData = (data, currency) => {
     PERCENTAGECHANGE: valueChange(PRICE, OPENDAY),
     ...rest,
   }));
-  const result = sortBy({ RAW: updatedRAW, DISPLAY }, true, "PERCENTAGECHANGE");
+  const result = sortBy(
+    { RAW: updatedRAW, DISPLAY },
+    false,
+    "PERCENTAGECHANGE"
+  );
   return result;
 };

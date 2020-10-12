@@ -108,10 +108,10 @@ describe("parseData", () => {
       ],
       RAW: [
         {
-          COINNAME: "LTC",
+          COINNAME: "BTC",
           OPENDAY: 40.42,
-          PERCENTAGECHANGE: "22.143",
-          PRICE: 49.37,
+          PERCENTAGECHANGE: "27935.131",
+          PRICE: 11331.8,
         },
         {
           PRICE: 374.37,
@@ -120,10 +120,10 @@ describe("parseData", () => {
           OPENDAY: 40.42,
         },
         {
-          COINNAME: "BTC",
+          COINNAME: "LTC",
           OPENDAY: 40.42,
-          PERCENTAGECHANGE: "27935.131",
-          PRICE: 11331.8,
+          PERCENTAGECHANGE: "22.143",
+          PRICE: 49.37,
         },
       ],
     };

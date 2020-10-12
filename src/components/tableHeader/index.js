@@ -20,7 +20,7 @@ const TableHeader = ({
       <TableCell align="right">
         <TableSortLabel
           active={true}
-          direction={sortByPrice ? "desc" : "asc"}
+          direction={sortByPrice ? "asc" : "desc"}
           onClick={() => handleSortByPrice("PRICE")}
           data-testid="sort-by-price"
         >
@@ -30,7 +30,7 @@ const TableHeader = ({
       <TableCell align="right">
         <TableSortLabel
           active={true}
-          direction={sortByOpenDay ? "desc" : "asc"}
+          direction={sortByOpenDay ? "asc" : "desc"}
           onClick={() => handleSortByOpenDay("OPENDAY")}
           data-testid="sort-by-openday"
         >
@@ -40,7 +40,7 @@ const TableHeader = ({
       <TableCell align="right">
         <TableSortLabel
           active={true}
-          direction={sortByOpenChange ? "desc" : "asc"}
+          direction={sortByOpenChange ? "asc" : "desc"}
           onClick={() => handleSortByChange("PERCENTAGECHANGE")}
           data-testid="sort-by-percentage-change"
         >
