@@ -27,11 +27,12 @@ const useStyles = makeStyles({
 });
 
 const App = () => {
-  const baseUrl = `https://min-api.cryptocompare.com/data/pricemultifull?`;
+  const baseUrl = `https://min-api.cryptocompare.com/data/pricemultifull?asd`;
   const fsyms = ["BTC,ETH,LTC,XRP,BCH,BNB,DOT,BSV,EOS,DAI,AR"];
   // const tsyms = ["USD"];
   const classes = useStyles();
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
   const {
     handleSortByPrice,
@@ -48,8 +49,12 @@ const App = () => {
 
   const fetchData = useCallback(
     async (cur) => {
-      const response = await api(baseUrl, fsyms, cur);
-      return setData(parseData(response, cur));
+      try {
+        const response = await api(baseUrl, fsyms, cur);
+        return setData(parseData(response, cur));
+      } catch (e) {
+        setError("Something went wrong");
+      }
     },
     [baseUrl, fsyms]
   );
@@ -84,6 +89,9 @@ const App = () => {
         </Table>
       </TableContainer>
     );
+  }
+  if (error) {
+    return <div>{error}</div>;
   }
   return null;
 };
